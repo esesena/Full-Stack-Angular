@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Scarabeli\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Scarabeli\\.nuget\\packages"
+    ]
+  }
+}
