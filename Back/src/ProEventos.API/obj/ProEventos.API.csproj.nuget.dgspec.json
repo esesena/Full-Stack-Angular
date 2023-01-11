@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
+    "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
+    "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectUniqueName": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectPath": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj",
         "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-        "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\obj\\",
+        "outputPath": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,34 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
