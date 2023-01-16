@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
+    "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
+    "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectUniqueName": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectPath": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj",
         "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-        "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\obj\\",
+        "outputPath": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
-                "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+              "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+                "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
               }
             }
           }
@@ -104,14 +104,14 @@
         }
       }
     },
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+    "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "projectUniqueName": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
         "projectName": "ProEventos.Application",
-        "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
         "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-        "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Application\\obj\\",
+        "outputPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -129,11 +129,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               },
-              "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
-                "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+              "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+                "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
               }
             }
           }
@@ -166,14 +166,14 @@
         }
       }
     },
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-        "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\obj\\",
+        "outputPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -221,14 +221,14 @@
         }
       }
     },
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+    "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectUniqueName": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "projectName": "ProEventos.Persistence",
-        "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-        "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Persistence\\obj\\",
+        "outputPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -246,8 +246,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               }
             }
           }

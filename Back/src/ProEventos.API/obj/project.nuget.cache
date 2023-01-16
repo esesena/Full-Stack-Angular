@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c2W4WJH9pDB2b1RDnsiSSI5XSivnl1ZWDzlI1qe0nVFrryVNOdtMGJKQfezhkPkWVeKkD1jigZu/+v72glScxw==",
+  "dgSpecHash": "Ir3pNRZfOUCfzFPuZPBSAU1+qi5j0eKqXlWPdtIKUpvyP1dzmAPYwEV6WuPBb9gNVXz9OJulaE44cgZ0A26K6Q==",
   "success": true,
-  "projectFilePath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+  "projectFilePath": "C:\\Courses\\Proeventos\\back\\src\\proeventos.api\\ProEventos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Scarabeli\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Scarabeli\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

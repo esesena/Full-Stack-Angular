@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "INGL2gG7QiyuT+PUSd8JTNIHVJ08maaxHsBlVZ/vVOO+5PITGPoNoj5ijNkTUhrAkX8secvy++//ERMvSEpUvw==",
+  "dgSpecHash": "F1a9UNtrUrZPb4bbcO63oByqbYLJL6eheK0Y3/SfbfLk8YvHLbp0CYy8PV6nCUMxhp5709ugdBKcNFUSI4yS2w==",
   "success": true,
-  "projectFilePath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+  "projectFilePath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
