@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+      "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
       "projectName": "ProEventos.Domain",
-      "projectPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+      "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
       "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-      "outputPath": "C:\\Courses\\Proeventos\\back\\src\\ProEventos.Domain\\obj\\",
+      "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
