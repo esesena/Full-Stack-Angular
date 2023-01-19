@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProEventos.Application.Contratos;
@@ -13,13 +16,15 @@ namespace ProEventos.API.Controllers
     public class EventosController : ControllerBase
     {
         private readonly IEventoService _eventoService;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public EventosController(IEventoService eventoService)
+        public EventosController(IEventoService eventoService, IWebHostEnvironment hostEnvironment)
         {
             _eventoService = eventoService;
+            _hostEnvironment = hostEnvironment;
         }
 
-        
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -79,10 +84,36 @@ namespace ProEventos.API.Controllers
         {
             try
             {
-                var eventos = await _eventoService.AddEventos(model);
-                if (eventos == null) return NoContent();
+                var evento = await _eventoService.AddEventos(model);
+                if (evento == null) return NoContent();
 
-                return Ok(eventos);
+                return Ok(evento);
+            }
+            catch (Exception ex)
+            {
+
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                    $"Erro ao tentar adicionar Eventos. Erro: {ex.Message}");
+            }
+        }
+
+        [HttpPost("upload-image/{eventoId}")]
+        public async Task<IActionResult> UploadImage(int eventoId)
+        {
+            try
+            {
+                var evento = await _eventoService.GetEventoByIdAsync(eventoId, true);
+                if (evento == null) return NoContent();
+
+                var file = Request.Form.Files[0];
+                if (file.Length > 0)
+                {
+                    DeleteImage(evento.ImagemURL);
+                    evento.ImagemURL = await SaveImage(file);
+                }
+                var EventoRetorno = await _eventoService.UpdateEvento(eventoId, evento);
+
+                return Ok(EventoRetorno);
             }
             catch (Exception ex)
             {
@@ -119,9 +150,16 @@ namespace ProEventos.API.Controllers
                 if (evento == null) return NoContent();
 
 
-                return await _eventoService.DeleteEvento(id) ?
-                Ok(new { message = "Deletado" }) :
-                throw new Exception("Ocorreu um problema não especifico ao tentar deletar Evento.");
+                if (await _eventoService.DeleteEvento(id))
+                {
+                    DeleteImage(evento.ImagemURL);
+                    return Ok(new { message = "Deletado" });
+                }
+                else
+                {
+                    throw new Exception("Ocorreu um problema não especifico ao tentar deletar Evento.");
+                }
+
             }
             catch (Exception ex)
             {
@@ -130,5 +168,33 @@ namespace ProEventos.API.Controllers
                     $"Erro ao tentar deletar Eventos. Erro: {ex.Message}");
             }
         }
+
+        [NonAction]
+        private async Task<string> SaveImage(IFormFile file)
+        {
+            string imageName = new String(Path.GetFileNameWithoutExtension(file.FileName).Take(10).ToArray()).Replace(' ', '-');
+
+            imageName = $"{imageName}{DateTime.UtcNow.ToString("yymmssfff")}{Path.GetExtension(file.FileName)}";
+
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @"Resources/images", imageName);
+
+            using (var fileStream = new FileStream(imagePath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+
+            return imageName;
+        }
+
+        [NonAction]
+        private void DeleteImage(string imagemURL)
+        {
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @"Resources/Images", imagemURL);
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
+            }
+        }
     }
+
 }
