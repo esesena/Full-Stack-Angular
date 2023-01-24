@@ -78,6 +78,10 @@ namespace ProEventos.API
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+<<<<<<< HEAD
+=======
+            services.AddScoped<IAccountService, AccountService>();
+>>>>>>> 87ece2c932f9b223be75456c7d85b3a246a5a96f
             services.AddScoped<IEventoService, EventoService>();
             services.AddScoped<ILoteService, LoteService>();
             services.AddScoped<ITokenService, TokenService>();
