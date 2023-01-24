@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -31,11 +31,15 @@ import { PerfilComponent } from './components/user/perfil/perfil.component';
 
 import { EventoService } from './services/evento.service';
 import { LoteService } from './services/lote.service';
+import { AccountService } from './services/account.service';
+
+import { JwtInterceptor } from './interseptors/jwt.interceptor';
 
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { HomeComponent } from './components/home/home.component';
 
 defineLocale('pt-br', ptBrLocale);
 
@@ -44,17 +48,18 @@ defineLocale('pt-br', ptBrLocale);
     AppComponent,
     EventosComponent,
     PalestrantesComponent,
-    TituloComponent,
     ContatosComponent,
     DashboardComponent,
     PerfilComponent,
     NavComponent,
+    TituloComponent,
     DateTimeFormatPipe,
     EventoDetalheComponent,
     EventoListaComponent,
     UserComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,8 +83,10 @@ defineLocale('pt-br', ptBrLocale);
     NgxCurrencyModule,
   ],
   providers: [
+    AccountService,
     EventoService,
-    LoteService
+    LoteService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
