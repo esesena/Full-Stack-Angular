@@ -34,8 +34,9 @@ export class AccountService {
     return this.http.put<UserUpdate>(this.baseUrl + 'updateUser', model).pipe(
       take(1),
       map((user: UserUpdate) => {
-        this.setCurrentUser(user);
-      })
+          this.setCurrentUser(user);
+        }
+      )
     )
   }
 
@@ -54,7 +55,7 @@ export class AccountService {
   logout(): void {
     localStorage.removeItem('user');
     this.currentUserSource.next(null);
-    this.currentUserSource.complete();
+    // this.currentUserSource.complete();
   }
 
   public setCurrentUser(user: User): void {

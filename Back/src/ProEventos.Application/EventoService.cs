@@ -4,6 +4,7 @@ using ProEventos.Application.Contratos;
 using ProEventos.Application.Dtos;
 using ProEventos.Domain;
 using ProEventos.Persistence.Contratos;
+using ProEventos.Persistence.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -14,14 +15,14 @@ namespace ProEventos.Application
         private readonly IGeralPersist _geralPersist;
         private readonly IEventoPersist _eventoPersist;
         private readonly IMapper _mapper;
-
-        public EventoService(IGeralPersist geralPersist, IEventoPersist eventoPersist, IMapper mapper)
+        public EventoService(IGeralPersist geralPersist,
+                             IEventoPersist eventoPersist,
+                             IMapper mapper)
         {
             _geralPersist = geralPersist;
             _eventoPersist = eventoPersist;
             _mapper = mapper;
         }
-
         public async Task<EventoDto> AddEventos(int userId, EventoDto model)
         {
             try
@@ -41,10 +42,10 @@ namespace ProEventos.Application
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }
+
         public async Task<EventoDto> UpdateEvento(int userId, int eventoId, EventoDto model)
         {
             try
@@ -69,7 +70,6 @@ namespace ProEventos.Application
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }
@@ -82,44 +82,29 @@ namespace ProEventos.Application
                 if (evento == null) throw new Exception("Evento para delete não encontrado.");
 
                 _geralPersist.Delete<Evento>(evento);
-                return (await _geralPersist.SaveChangesAsync());
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public async Task<EventoDto[]> GetAllEventosAsync(int userId, bool includePalestrantes = false)
-        {
-            try
-            {
-                var eventos = await _eventoPersist.GetAllEventosAsync(userId, includePalestrantes);
-                if (eventos == null) return null;
-
-                var resultado = _mapper.Map<EventoDto[]>(eventos);
-
-                return resultado;
+                return await _geralPersist.SaveChangesAsync();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            
         }
 
-        public async Task<EventoDto[]> GetAllEventosByTemaAsync(int userId, string tema, bool includePalestrantes = false)
+        public async Task<PageList<EventoDto>> GetAllEventosAsync(int userId, PageParams pageParams, bool includePalestrantes = false)
         {
             try
             {
-                var eventos = await _eventoPersist.GetAllEventosByTemaAsync(userId, tema, includePalestrantes);
+                var eventos = await _eventoPersist.GetAllEventosAsync(userId, pageParams, includePalestrantes);
                 if (eventos == null) return null;
 
-                var resultado = _mapper.Map<EventoDto[]>(eventos);
+                var resultado = _mapper.Map<PageList<EventoDto>>(eventos);
+
+                resultado.CurrentPage = eventos.CurrentPage;
+                resultado.TotalPages = eventos.TotalPages;
+                resultado.PageSize = eventos.PageSize;
+                resultado.TotalCount = eventos.TotalCount;
 
                 return resultado;
-
             }
             catch (Exception ex)
             {

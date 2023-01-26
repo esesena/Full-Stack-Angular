@@ -9,4 +9,4 @@ C:\Courses\Proeventos\Back\src\ProEventos.Domain\obj\Debug\net5.0\ProEventos.Dom
 C:\Courses\Proeventos\Back\src\ProEventos.Domain\obj\Debug\net5.0\ProEventos.Domain.dll
 C:\Courses\Proeventos\Back\src\ProEventos.Domain\obj\Debug\net5.0\ProEventos.Domain.pdb
 C:\Courses\Proeventos\Back\src\ProEventos.Domain\obj\Debug\net5.0\ref\ProEventos.Domain.dll
-C:\Courses\Proeventos\back\src\ProEventos.Domain\bin\Debug\net5.0\ref\ProEventos.Domain.dll
+C:\Courses\Proeventos\Back\src\ProEventos.Domain\bin\Debug\net5.0\ref\ProEventos.Domain.dll

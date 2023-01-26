@@ -95,5 +95,5 @@ C:\Courses\Proeventos\Back\src\ProEventos.API\bin\Debug\net5.0\Microsoft.Identit
 C:\Courses\Proeventos\Back\src\ProEventos.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Courses\Proeventos\Back\src\ProEventos.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Courses\Proeventos\Back\src\ProEventos.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Courses\Proeventos\Back\src\ProEventos.API\bin\Debug\net5.0\ref\ProEventos.API.dll
 C:\Courses\Proeventos\Back\src\ProEventos.API\obj\Debug\net5.0\staticwebassets\ProEventos.API.StaticWebAssets.xml
+C:\Courses\Proeventos\Back\src\ProEventos.API\bin\Debug\net5.0\ref\ProEventos.API.dll

@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   // providers: [EventoService]
 })
 export class EventosComponent implements OnInit {
- ngOnInit(): void {
 
- }
+  ngOnInit(): void {
+
+  }
+
 }
