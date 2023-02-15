@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProEventos.API.Extensions;
+using ProEventos.API.Helpers;
+using ProEventos.Application;
 using ProEventos.Application.Contratos;
 using ProEventos.Application.Dtos;
 using System;
@@ -16,11 +18,14 @@ namespace ProEventos.API.Controllers
     {
         private readonly IAccountService _accountService;
         private readonly ITokenService _tokenService;
+        private readonly IUtil _util;
+        private readonly string _destino = "Perfil";
 
-        public AccountController(IAccountService accountService, ITokenService tokenService)
+        public AccountController(IAccountService accountService, ITokenService tokenService, IUtil util)
         {
             _accountService = accountService;
             _tokenService = tokenService;
+            _util = util;
         }
 
         [HttpGet("GetUser")]
@@ -73,10 +78,10 @@ namespace ProEventos.API.Controllers
             try
             {
                 var user = await _accountService.GetUserByUserNameAsync(userLogin.UserName);
-                if (user == null) return Unauthorized("Usuári inválido");
+                if (user == null) return Unauthorized("Usuário inválido");
 
-                var resul = await _accountService.CheckUserPasswordAsync(user, userLogin.Password);
-                if (resul == null) return Unauthorized("Senha inválida");
+                var result = await _accountService.CheckUserPasswordAsync(user, userLogin.Password);
+                if (!result.Succeeded) return Unauthorized("Senha inválida");
 
                 return Ok(new
                 {
@@ -108,7 +113,7 @@ namespace ProEventos.API.Controllers
                 var userReturn = await _accountService.UpdateAccount(userUpdateDto);
                 if (userReturn == null) return NoContent();
 
-                return Ok(new 
+                return Ok(new
                 {
                     userName = userReturn.UserName,
                     PrimeroNome = userReturn.PrimeiroNome,
@@ -119,6 +124,32 @@ namespace ProEventos.API.Controllers
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
                     $"Erro ao tentar atualizar usuário. Erro: {ex.Message}");
+            }
+        }
+
+        [HttpPost("upload-image/{userId}")]
+        public async Task<IActionResult> UploadImage()
+        {
+            try
+            {
+                var user = await _accountService.GetUserByUserNameAsync(User.GetUserName());
+                if (user == null) return NoContent();
+
+                var file = Request.Form.Files[0];
+                if (file.Length > 0)
+                {
+                    _util.DeleteImage(user.ImagemURL, _destino);
+                    user.ImagemURL = await _util.SaveImage(file, _destino);
+                }
+                var EventoRetorno = await _accountService.UpdateAccount(user);
+
+                return Ok(EventoRetorno);
+            }
+            catch (Exception ex)
+            {
+
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                    $"Erro ao tentar realizar upload. Erro: {ex.Message}");
             }
         }
     }

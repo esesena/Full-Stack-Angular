@@ -14,4 +14,4 @@ C:\Courses\Proeventos\Back\src\ProEventos.Application\obj\Debug\net5.0\ProEvento
 C:\Courses\Proeventos\Back\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.dll
 C:\Courses\Proeventos\Back\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.pdb
 C:\Courses\Proeventos\Back\src\ProEventos.Application\obj\Debug\net5.0\ref\ProEventos.Application.dll
-C:\Courses\Proeventos\Back\src\ProEventos.Application\bin\Debug\net5.0\ref\ProEventos.Application.dll
+C:\Courses\Proeventos\Back\src\ProEventos.Application\obj\Debug\net5.0\refint\ProEventos.Application.dll

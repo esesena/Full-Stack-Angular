@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { getUnixTime } from 'ngx-bootstrap/chronos/utils/date-getters';
 import { User } from './models/identity/User';
 import { AccountService } from './services/account.service';
 
@@ -9,9 +8,9 @@ import { AccountService } from './services/account.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public accountService: AccountService) { }
+  constructor(public accountService: AccountService){}
 
-  ngOnInit(): void {
+  ngOninit(): void {
     this.setCurrentUser();
   }
 
@@ -27,5 +26,4 @@ export class AppComponent {
     if (user)
       this.accountService.setCurrentUser(user);
   }
-
 }

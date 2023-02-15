@@ -96,6 +96,7 @@ namespace ProEventos.Application
                 if (userUpdateDto.Password != null)
                 {
                     var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                    await _userManager.ResetPasswordAsync(user, token, userUpdateDto.Password);
                 }
 
                 _userPersist.Update<User>(user);
