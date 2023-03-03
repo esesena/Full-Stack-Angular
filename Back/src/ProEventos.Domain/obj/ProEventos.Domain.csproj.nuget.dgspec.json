@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {}
+    "C:\\Courses\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\Courses\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\Courses\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
-        "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
-        "outputPath": "C:\\Courses\\Proeventos\\Back\\src\\ProEventos.Domain\\obj\\",
+        "projectPath": "C:\\Courses\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "packagesPath": "C:\\Users\\elana\\.nuget\\packages\\",
+        "outputPath": "C:\\Courses\\ProEventos\\Back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\elana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

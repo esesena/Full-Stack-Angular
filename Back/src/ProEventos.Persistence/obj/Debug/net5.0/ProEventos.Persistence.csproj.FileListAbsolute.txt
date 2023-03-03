@@ -15,4 +15,4 @@ C:\Courses\Proeventos\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEvento
 C:\Courses\Proeventos\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.runtimeconfig.json
 C:\Courses\Proeventos\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.runtimeconfig.dev.json
 C:\Courses\Proeventos\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.genruntimeconfig.cache
-C:\Courses\Proeventos\Back\src\ProEventos.Persistence\obj\Debug\net5.0\refint\ProEventos.Persistence.dll
+C:\Courses\ProEventos\Back\src\ProEventos.Persistence\obj\Debug\net5.0\refint\ProEventos.Persistence.dll

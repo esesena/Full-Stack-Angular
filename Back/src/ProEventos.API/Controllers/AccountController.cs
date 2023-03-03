@@ -127,7 +127,7 @@ namespace ProEventos.API.Controllers
             }
         }
 
-        [HttpPost("upload-image/{userId}")]
+        [HttpPost("upload-image")]
         public async Task<IActionResult> UploadImage()
         {
             try
@@ -141,15 +141,14 @@ namespace ProEventos.API.Controllers
                     _util.DeleteImage(user.ImagemURL, _destino);
                     user.ImagemURL = await _util.SaveImage(file, _destino);
                 }
-                var EventoRetorno = await _accountService.UpdateAccount(user);
+                var userRetorno = await _accountService.UpdateAccount(user);
 
-                return Ok(EventoRetorno);
+                return Ok(userRetorno);
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                    $"Erro ao tentar realizar upload. Erro: {ex.Message}");
+                    $"Erro ao tentar realizar upload de Foto do Usuário. Erro: {ex.Message}");
             }
         }
     }

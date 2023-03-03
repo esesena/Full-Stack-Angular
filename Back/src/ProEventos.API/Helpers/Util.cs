@@ -1,12 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ProEventos.API.Helpers
@@ -28,6 +24,12 @@ namespace ProEventos.API.Helpers
 
             var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @$"Resources/{destino}", imageName);
 
+            var directoryPath = Path.Combine(_hostEnvironment.ContentRootPath, @$"Resources\{destino}");
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
             using (var fileStream = new FileStream(imagePath, FileMode.Create))
             {
                 await imageFile.CopyToAsync(fileStream);
@@ -38,10 +40,13 @@ namespace ProEventos.API.Helpers
 
         public void DeleteImage(string imageName, string destino)
         {
-            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @$"Resources/{destino}", imageName);
-            if (System.IO.File.Exists(imagePath))
+            if (!string.IsNullOrEmpty(imageName))
             {
-                System.IO.File.Delete(imagePath);
+                var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @$"Resources/{destino}", imageName);
+                if (File.Exists(imagePath))
+                {
+                    File.Delete(imagePath);
+                }
             }
         }
     }
